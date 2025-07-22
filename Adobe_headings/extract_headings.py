@@ -1,15 +1,12 @@
-import fitz
-from collections import Counter, defaultdict
+import fitz  # PyMuPDF
 import re
 from statistics import median
-import json
 
 
 class PDFHeadingExtractor:
-    
     def __init__(self):
         pass
-    
+
     def is_decorative(self, text):
         return (
             re.fullmatch(r"[.\-_\s]{5,}", text) or
@@ -17,7 +14,7 @@ class PDFHeadingExtractor:
             len(text.strip()) < 3 or
             sum(c.isalpha() for c in text) < 3
         )
-    
+
     def parse_pdf_spans(self, doc):
         all_spans = []
         for page_num, page in enumerate(doc, start=1):
@@ -32,14 +29,14 @@ class PDFHeadingExtractor:
                         text = span["text"].strip()
                         if not text or self.is_decorative(text):
                             continue
-                
+
                         y = span["bbox"][1]
                         x = span["bbox"][0]
                         if y < 0.05 * page_height or y > 0.95 * page_height:
                             continue
-                
+
                         is_bold = "Bold" in span["font"]
-                
+
                         entry = {
                             "text": text,
                             "size": round(span["size"], 1),
@@ -50,23 +47,23 @@ class PDFHeadingExtractor:
                             "x": x
                         }
                         line_spans.append(entry)
-                
+
                     for s in line_spans:
                         if s["is_bold"]:
                             all_spans.append(s)
 
         return all_spans
-    
+
     def adjust_font_sizes(self, spans):
         for span in spans:
             adjusted_size = span["size"] + (4 if span["is_bold"] else 0)
             span["adjusted_size"] = round(adjusted_size, 2)
         return spans
-    
+
     def infer_dynamic_thresholds(self, spans):
         if not spans:
             return 50, 20, 10
-            
+
         x_vals = [s["x"] for s in spans]
         base_x = min(x_vals)
         indent_delta = median([x - base_x for x in x_vals if x - base_x > 0]) or 20
@@ -79,7 +76,7 @@ class PDFHeadingExtractor:
         y_merge_threshold = median(y_deltas) if y_deltas else 15
 
         return base_x, indent_delta, y_merge_threshold
-    
+
     def map_sizes_to_levels(self, spans):
         sizes = [s["adjusted_size"] for s in spans]
         unique = sorted(set(sizes), reverse=True)
@@ -91,7 +88,7 @@ class PDFHeadingExtractor:
                 size_to_level[unique[i]] = level
 
         return size_to_level
-    
+
     def build_outline(self, spans, size_to_level, base_x, indent_delta, y_merge_threshold):
         outline = []
         title_parts = []
@@ -141,19 +138,77 @@ class PDFHeadingExtractor:
             outline.append({
                 "level": level,
                 "text": combined_text.strip(),
-                "page": page
+                "page": page,
+                "y": y  # Store for section slicing
             })
 
         return title_parts, outline
-    
-    def extract_structured_headings(self, pdf_path):
+
+    def find_heading_y(self, page, heading_text):
+        """Find the vertical Y-position of the heading on a page."""
+        blocks = page.get_text("dict")["blocks"]
+        for block in blocks:
+            for line in block.get("lines", []):
+                full_line = " ".join(span["text"] for span in line["spans"]).strip()
+                if heading_text in full_line:
+                    return line["bbox"][1]
+        return 0
+
+    def extract_section_texts(self, doc, outline):
+        section_texts = {}
+        heading_positions = []
+
+        # Collect positions for each heading
+        for item in outline:
+            page_idx = item["page"] - 1
+            y = item.get("y") or self.find_heading_y(doc[page_idx], item["text"])
+            heading_positions.append((page_idx, y, item["text"]))
+
+        # Extract section text between headings
+        for idx, (start_page, start_y, _) in enumerate(heading_positions):
+            end_page, end_y = len(doc) - 1, float('inf')
+            if idx + 1 < len(heading_positions):
+                end_page, end_y, _ = heading_positions[idx + 1]
+
+            section_lines = []
+
+            for p in range(start_page, end_page + 1):
+                page = doc[p]
+                blocks = page.get_text("dict")["blocks"]
+
+                for block in blocks:
+                    if "lines" not in block:
+                        continue
+                    for line in block["lines"]:
+                        y = line["bbox"][1]
+                        if (p == start_page and y < start_y) or (p == end_page and y >= end_y):
+                            continue
+                        line_text = " ".join(span["text"] for span in line["spans"]).strip()
+                        if line_text:
+                            section_lines.append(line_text)
+
+            section_texts[idx] = "\n".join(section_lines).strip()
+
+        return section_texts
+
+    def extract_structured_headings(self, pdf_path, include_text=False):
         doc = fitz.open(pdf_path)
         spans = self.parse_pdf_spans(doc)
         spans = self.adjust_font_sizes(spans)
         base_x, indent_delta, y_merge_threshold = self.infer_dynamic_thresholds(spans)
         size_to_level = self.map_sizes_to_levels(spans)
         title_parts, outline = self.build_outline(spans, size_to_level, base_x, indent_delta, y_merge_threshold)
-        return {
+
+        result = {
             "title": " ".join(title_parts).strip(),
             "outline": outline
         }
+
+        if include_text:
+            section_texts = self.extract_section_texts(doc, outline)
+            for i, item in enumerate(outline):
+                item["text_content"] = section_texts.get(i, "")
+
+        for item in result["outline"]:
+            item.pop("y", None)
+        return result
