@@ -65,8 +65,10 @@ class PDFHeadingExtractor:
             return 50, 20, 10
 
         x_vals = [s["x"] for s in spans]
-        base_x = min(x_vals)
-        indent_delta = median([x - base_x for x in x_vals if x - base_x > 0]) or 20
+        base_x = min(x_vals) if x_vals else 50
+
+        indent_gaps = [x - base_x for x in x_vals if (x - base_x) > 0]
+        indent_delta = median(indent_gaps) if indent_gaps else 20
 
         y_deltas = []
         for i in range(1, len(spans)):
@@ -76,6 +78,7 @@ class PDFHeadingExtractor:
         y_merge_threshold = median(y_deltas) if y_deltas else 15
 
         return base_x, indent_delta, y_merge_threshold
+
 
     def map_sizes_to_levels(self, spans):
         sizes = [s["adjusted_size"] for s in spans]
