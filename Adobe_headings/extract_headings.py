@@ -165,7 +165,7 @@ class PDFHeadingExtractor:
             heading_positions.append((page_idx, y, item["text"]))
 
         # Extract section text between headings
-        for idx, (start_page, start_y, _) in enumerate(heading_positions):
+        for idx, (start_page, start_y, heading_text) in enumerate(heading_positions):
             end_page, end_y = len(doc) - 1, float('inf')
             if idx + 1 < len(heading_positions):
                 end_page, end_y, _ = heading_positions[idx + 1]
@@ -184,6 +184,8 @@ class PDFHeadingExtractor:
                         if (p == start_page and y < start_y) or (p == end_page and y >= end_y):
                             continue
                         line_text = " ".join(span["text"] for span in line["spans"]).strip()
+                        if line_text == heading_text:
+                            continue
                         if line_text:
                             section_lines.append(line_text)
 
