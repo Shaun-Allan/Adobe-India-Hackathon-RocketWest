@@ -23,77 +23,7 @@
         },
         {
             "level": "H1",
-            "text": "Nice",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Antibes",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Saint-Tropez",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Marseille to Cassis",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Îles d'Hyères",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Cannes",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Menton",
-            "page": 2
-        },
-        {
-            "level": "H1",
             "text": "Water Sports",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Cannes, Nice, and Saint-Tropez",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Toulon",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Cerbère-Banyuls",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Mediterranean Coast",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Marseille",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "Port Grimaud",
-            "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "La Ciotat",
             "page": 2
         },
         {
@@ -108,77 +38,7 @@
         },
         {
             "level": "H1",
-            "text": "Nice",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Antibes",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Saint-Paul-de-Vence",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Aix-en-Provence",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Arles",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Marseille",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Toulouse",
-            "page": 3
-        },
-        {
-            "level": "H1",
             "text": "Historical Sites",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Nîmes",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Avignon",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Carcassonne",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Arles",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Orange",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Aigues-Mortes",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "Grasse",
             "page": 3
         },
         {
@@ -193,77 +53,7 @@
         },
         {
             "level": "H1",
-            "text": "Verdon Gorge",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Luberon Regional Park",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Pyrenees National Park",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Mercantour National Park",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Camargue",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Mont Ventoux",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Gorges du Tarn",
-            "page": 4
-        },
-        {
-            "level": "H1",
             "text": "Water Activities",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Ardèche River",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Dordogne River",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Ubaye River",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Gorges du Verdon",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Lake Sainte-Croix",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Lake Serre-Ponçon",
-            "page": 4
-        },
-        {
-            "level": "H1",
-            "text": "Cévennes National Park",
             "page": 4
         },
         {
@@ -278,117 +68,12 @@
         },
         {
             "level": "H1",
-            "text": "Provence",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Languedoc",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Châteauneuf-du-Pape",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Bandol",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Côtes du Rhône",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Gaillac",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Bordeaux",
-            "page": 5
-        },
-        {
-            "level": "H1",
             "text": "Cooking Classes",
             "page": 5
         },
         {
             "level": "H1",
-            "text": "Provence",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Périgord",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Nice",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Toulouse",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Marseille",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Lyon",
-            "page": 5
-        },
-        {
-            "level": "H1",
-            "text": "Sarlat",
-            "page": 5
-        },
-        {
-            "level": "H1",
             "text": "Festivals and Events",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Cannes",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Nice",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Avignon",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Arles",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Menton",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Grasse",
-            "page": 6
-        },
-        {
-            "level": "H1",
-            "text": "Marseille",
             "page": 6
         },
         {
@@ -403,77 +88,7 @@
         },
         {
             "level": "H1",
-            "text": "Aix-en-Provence",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Bordeaux",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Vichy",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Evian-les-Bains",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Saint-Raphaël",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Biarritz",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Cannes",
-            "page": 7
-        },
-        {
-            "level": "H1",
             "text": "Yoga and Meditation Retreats",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Provence",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Pyrenees",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Côte d'Azur",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Luberon",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Camargue",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Saint-Tropez",
-            "page": 7
-        },
-        {
-            "level": "H1",
-            "text": "Corsica",
             "page": 7
         },
         {
@@ -484,41 +99,6 @@
         {
             "level": "H1",
             "text": "Local Markets",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Nice",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Cannes",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Avignon",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Aix-en-Provence",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Saint-Rémy-de-Provence",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Uzès",
-            "page": 8
-        },
-        {
-            "level": "H1",
-            "text": "Sarlat",
             "page": 8
         },
         {
@@ -566,5 +146,6 @@
             "text": "Conclusion",
             "page": 13
         }
-    ]
+    ],
+    "toc": []
 }

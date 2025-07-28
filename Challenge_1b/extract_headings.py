@@ -24,19 +24,22 @@ class PDFHeadingExtractor:
                 if "lines" not in block:
                     continue
                 for line in block["lines"]:
+                    # Gather all spans in the line
                     line_spans = []
+                    bold_count = 0
+                    total_count = 0
                     for span in line["spans"]:
                         text = span["text"].strip()
                         if not text or self.is_decorative(text):
                             continue
-
                         y = span["bbox"][1]
                         x = span["bbox"][0]
                         if y < 0.05 * page_height or y > 0.95 * page_height:
                             continue
-
                         is_bold = "Bold" in span["font"]
-
+                        if is_bold:
+                            bold_count += 1
+                        total_count += 1
                         entry = {
                             "text": text,
                             "size": round(span["size"], 1),
@@ -47,11 +50,10 @@ class PDFHeadingExtractor:
                             "x": x
                         }
                         line_spans.append(entry)
-
-                    for s in line_spans:
-                        if s["is_bold"]:
-                            all_spans.append(s)
-
+                    # Only consider as heading if all spans are bold or only one bold span in the line
+                    if line_spans:
+                        if bold_count == total_count or (bold_count == 1 and total_count == 1):
+                            all_spans.extend(line_spans)
         return all_spans
 
     def adjust_font_sizes(self, spans):
@@ -196,6 +198,27 @@ class PDFHeadingExtractor:
 
         return section_texts
 
+    def extract_toc(self, doc, max_pages=5):
+        toc_entries = []
+        toc_pattern = re.compile(r"(.+?)\.{2,}\s*(\d+)$")
+        for page_num in range(min(max_pages, len(doc))):
+            page = doc[page_num]
+            blocks = page.get_text("dict")["blocks"]
+            for block in blocks:
+                if "lines" not in block:
+                    continue
+                for line in block["lines"]:
+                    line_text = " ".join(span["text"] for span in line["spans"]).strip()
+                    match = toc_pattern.match(line_text)
+                    if match:
+                        title, page_str = match.groups()
+                        try:
+                            page_number = int(page_str)
+                            toc_entries.append({"title": title.strip(), "page": page_number})
+                        except ValueError:
+                            continue
+        return toc_entries
+
     def extract_structured_headings(self, pdf_path, include_text=False):
         doc = fitz.open(pdf_path)
         spans = self.parse_pdf_spans(doc)
@@ -204,9 +227,12 @@ class PDFHeadingExtractor:
         size_to_level = self.map_sizes_to_levels(spans)
         title_parts, outline = self.build_outline(spans, size_to_level, base_x, indent_delta, y_merge_threshold)
 
+        toc = self.extract_toc(doc)
+
         result = {
             "title": " ".join(title_parts).strip(),
-            "outline": outline
+            "outline": outline,
+            "toc": toc
         }
 
         if include_text:
