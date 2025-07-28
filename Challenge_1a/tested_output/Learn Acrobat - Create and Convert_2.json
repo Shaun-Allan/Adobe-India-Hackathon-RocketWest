@@ -1,34 +1,14 @@
 {
-    "title": "",
+    "title": "Select Visio layers to convert (Acrobat Pro)",
     "outline": [
-        {
-            "level": "H3",
-            "text": "Select Visio layers to convert (Acrobat Pro)",
-            "page": 1
-        },
         {
             "level": "H1",
             "text": "Convert AutoCAD files to PDF (Acrobat Pro for",
             "page": 3
         },
         {
-            "level": "H1",
-            "text": "Windows)",
-            "page": 3
-        },
-        {
             "level": "H3",
             "text": "Convert AutoCAD files when AutoCAD is installed",
-            "page": 3
-        },
-        {
-            "level": "H2",
-            "text": "PDF",
-            "page": 3
-        },
-        {
-            "level": "H2",
-            "text": "Convert To Adobe PDFAnd Send For Review",
             "page": 3
         },
         {
@@ -126,6 +106,5 @@
             "text": "Delete a folder and reassign the Adobe PDF printer to the default port",
             "page": 17
         }
-    ],
-    "toc": []
+    ]
 }

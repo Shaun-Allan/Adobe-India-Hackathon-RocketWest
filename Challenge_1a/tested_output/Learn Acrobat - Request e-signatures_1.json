@@ -1,30 +1,10 @@
 {
-    "title": "",
+    "title": "Learn Acrobat - Request e-signatures_1",
     "outline": [
         {
             "level": "H1",
             "text": "Send a document to get signatures from",
             "page": 2
-        },
-        {
-            "level": "H1",
-            "text": "others",
-            "page": 2
-        },
-        {
-            "level": "H3",
-            "text": "Based Authentication",
-            "page": 3
-        },
-        {
-            "level": "H3",
-            "text": "Phone,",
-            "page": 3
-        },
-        {
-            "level": "H3",
-            "text": "Acrobat Sign",
-            "page": 3
         },
         {
             "level": "H3",
@@ -52,36 +32,6 @@
             "page": 9
         },
         {
-            "level": "H3",
-            "text": "Add a file",
-            "page": 9
-        },
-        {
-            "level": "H3",
-            "text": "Add participants",
-            "page": 10
-        },
-        {
-            "level": "H3",
-            "text": "Add Agreement Details:",
-            "page": 12
-        },
-        {
-            "level": "H3",
-            "text": "Prepare the Agreement and Add Fields:",
-            "page": 14
-        },
-        {
-            "level": "H3",
-            "text": "Review and Send",
-            "page": 15
-        },
-        {
-            "level": "H3",
-            "text": "Confirmation",
-            "page": 16
-        },
-        {
             "level": "H2",
             "text": "Manage your bulk sends",
             "page": 17
@@ -103,11 +53,6 @@
         },
         {
             "level": "H3",
-            "text": "Sign documents",
-            "page": 20
-        },
-        {
-            "level": "H3",
             "text": "Validate documents",
             "page": 20
         },
@@ -123,16 +68,6 @@
         },
         {
             "level": "H2",
-            "text": "based signatures?",
-            "page": 21
-        },
-        {
-            "level": "H2",
-            "text": "Resources",
-            "page": 21
-        },
-        {
-            "level": "H2",
             "text": "Steps to add a certificate-based signature to a PDF",
             "page": 22
         },
@@ -143,22 +78,12 @@
         },
         {
             "level": "H3",
-            "text": "Digitally sign",
-            "page": 23
-        },
-        {
-            "level": "H3",
             "text": "Certify (visible or invisible signatures)",
             "page": 23
         },
         {
             "level": "H2",
             "text": "Setting up certificate-based signatures",
-            "page": 24
-        },
-        {
-            "level": "H3",
-            "text": "Note:",
             "page": 24
         },
         {
@@ -178,33 +103,13 @@
         },
         {
             "level": "H3",
-            "text": "Signature",
-            "page": 25
-        },
-        {
-            "level": "H3",
-            "text": "No Graphic",
-            "page": 26
-        },
-        {
-            "level": "H3",
             "text": "Imported Graphic",
-            "page": 26
-        },
-        {
-            "level": "H3",
-            "text": "Name",
             "page": 26
         },
         {
             "level": "H2",
             "text": "Set up a roaming ID account",
             "page": 26
-        },
-        {
-            "level": "H3",
-            "text": "Account",
-            "page": 27
         },
         {
             "level": "H2",
@@ -241,6 +146,5 @@
             "text": "Set a timestamp server as the default",
             "page": 30
         }
-    ],
-    "toc": []
+    ]
 }

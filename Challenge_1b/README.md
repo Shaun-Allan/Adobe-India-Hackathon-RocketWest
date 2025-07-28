@@ -32,8 +32,8 @@ docker build --platform linux/amd64 -t mysolutionname:somerandomidentifier .
 
 ### Prepare Input Files
 
-- Place your PDF documents inside a local folder, e.g., `/local/input`.
-- Prepare an input JSON specification describing the documents and query in `/local/input/input.json`, e.g.:
+- Place your PDF documents inside a local folder, e.g., `/input/PDFs`.
+- Prepare an input JSON specification describing the documents and query in `/input/input.json`, e.g.:
 
 ```
 {
@@ -50,7 +50,7 @@ docker build --platform linux/amd64 -t mysolutionname:somerandomidentifier .
 }
 ```
 
-- Verify with `tested_input` folder as to how the input should be
+- **Verify with `tested_input` folder as to how the input should be**
 
 ### Run the Container
 
@@ -69,8 +69,8 @@ docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --networ
 
 ### Find Your Output
 
-- The extracted JSON outlines per PDF are saved in `/local/output/outlines/`
-- The final report with ranked sections and summaries is saved as `/local/output/output.json`
+- The extracted JSON outlines per PDF are saved in `/output/outlines/`
+- The final report with ranked sections and summaries is saved as `/output/output.json`
 
 ---
 
@@ -126,14 +126,14 @@ This project combines PDF structural analysis and modern NLP techniques to help 
 │
 ├── extract_headings.py          # PDF heading extraction code
 ├── process_pdfs.py              # PDF batch extraction script
-├── score.py                    # Chunk scoring utilities
-├── summary.py                  # Extracts insights summaries via transformers
-├── config.py                   # Configuration constants for embedding, model paths, thresholds
-├── Dockerfile                  # Docker build file
-├── requirements.txt            # Python dependencies
-├── input/                      # Place input PDF files and input.json spec here
-├── outlines/                   # Intermediate JSON outlines are saved here
-└── output/                     # Final extracted and summarized output JSON here
+├── score.py                     # Chunk scoring utilities
+├── summary.py                   # Extracts insights summaries via transformers
+├── config.py                    # Configuration constants for embedding, model paths, thresholds
+├── Dockerfile                   # Docker build file
+├── requirements.txt             # Python dependencies
+├── input/                       # Place input PDF files and input.json spec here
+├── outlines/                    # Intermediate JSON outlines are saved here
+└── output/                      # Final extracted and summarized output JSON here
 ```
 
 ---

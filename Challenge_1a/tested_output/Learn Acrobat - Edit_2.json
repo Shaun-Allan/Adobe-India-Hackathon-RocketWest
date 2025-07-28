@@ -1,19 +1,9 @@
 {
-    "title": "",
+    "title": "Export PDF images to another format",
     "outline": [
-        {
-            "level": "H2",
-            "text": "Export PDF images to another format",
-            "page": 1
-        },
         {
             "level": "H1",
             "text": "Rotate, move, delete, extract, or renumber",
-            "page": 3
-        },
-        {
-            "level": "H1",
-            "text": "pages in a PDF",
             "page": 3
         },
         {
@@ -27,29 +17,9 @@
             "page": 4
         },
         {
-            "level": "H3",
-            "text": "pages after extracting",
-            "page": 4
-        },
-        {
-            "level": "H3",
-            "text": "separate files",
-            "page": 4
-        },
-        {
             "level": "H2",
             "text": "Extract random pages from a PDF",
             "page": 4
-        },
-        {
-            "level": "H3",
-            "text": "pages after extracting",
-            "page": 5
-        },
-        {
-            "level": "H3",
-            "text": "separate files",
-            "page": 5
         },
         {
             "level": "H1",
@@ -59,11 +29,6 @@
         {
             "level": "H3",
             "text": "Number of pages",
-            "page": 6
-        },
-        {
-            "level": "H3",
-            "text": "File Size",
             "page": 6
         },
         {
@@ -80,11 +45,6 @@
             "level": "H3",
             "text": "Number of pages",
             "page": 6
-        },
-        {
-            "level": "H3",
-            "text": "File Size",
-            "page": 7
         },
         {
             "level": "H3",
@@ -147,11 +107,6 @@
             "page": 14
         },
         {
-            "level": "H3",
-            "text": "started",
-            "page": 15
-        },
-        {
             "level": "H2",
             "text": "Edit a scanned document",
             "page": 15
@@ -160,12 +115,6 @@
             "level": "H1",
             "text": "Enhance scanned file or camera images for",
             "page": 16
-        },
-        {
-            "level": "H1",
-            "text": "clear PDFs",
-            "page": 16
         }
-    ],
-    "toc": []
+    ]
 }

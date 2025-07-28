@@ -1,5 +1,5 @@
 {
-    "title": "",
+    "title": "Learn Acrobat - Edit_1",
     "outline": [
         {
             "level": "H1",
@@ -18,17 +18,7 @@
         },
         {
             "level": "H2",
-            "text": "Format text",
-            "page": 5
-        },
-        {
-            "level": "H2",
             "text": "Add new text",
-            "page": 6
-        },
-        {
-            "level": "H3",
-            "text": "Content",
             "page": 6
         },
         {
@@ -37,18 +27,8 @@
             "page": 7
         },
         {
-            "level": "H3",
-            "text": "Content",
-            "page": 7
-        },
-        {
             "level": "H2",
             "text": "Add or edit lists",
-            "page": 9
-        },
-        {
-            "level": "H3",
-            "text": "Content",
             "page": 9
         },
         {
@@ -58,22 +38,7 @@
         },
         {
             "level": "H2",
-            "text": "Change font",
-            "page": 11
-        },
-        {
-            "level": "H3",
-            "text": "Content",
-            "page": 11
-        },
-        {
-            "level": "H2",
             "text": "Change font size",
-            "page": 11
-        },
-        {
-            "level": "H3",
-            "text": "Content",
             "page": 11
         },
         {
@@ -82,28 +47,8 @@
             "page": 11
         },
         {
-            "level": "H3",
-            "text": "more",
-            "page": 11
-        },
-        {
-            "level": "H3",
-            "text": "Redo",
-            "page": 11
-        },
-        {
             "level": "H2",
             "text": "Undo text in Acrobat",
-            "page": 11
-        },
-        {
-            "level": "H3",
-            "text": "more",
-            "page": 11
-        },
-        {
-            "level": "H3",
-            "text": "Undo",
             "page": 11
         },
         {
@@ -127,11 +72,6 @@
             "page": 13
         },
         {
-            "level": "H3",
-            "text": "Note:",
-            "page": 13
-        },
-        {
             "level": "H2",
             "text": "Modify images in a PDF",
             "page": 14
@@ -151,6 +91,5 @@
             "text": "Edit an image outside Acrobat",
             "page": 16
         }
-    ],
-    "toc": []
+    ]
 }

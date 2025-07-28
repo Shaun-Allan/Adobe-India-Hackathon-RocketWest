@@ -1,7 +1,7 @@
 import fitz  # PyMuPDF
 import re
 from statistics import median
-
+import os
 
 class PDFHeadingExtractor:
     def __init__(self):
@@ -23,6 +23,7 @@ class PDFHeadingExtractor:
             for block in blocks:
                 if "lines" not in block:
                     continue
+                prev_line_text = None
                 for line in block["lines"]:
                     # Gather all spans in the line
                     line_spans = []
@@ -52,8 +53,29 @@ class PDFHeadingExtractor:
                         line_spans.append(entry)
                     # Only consider as heading if all spans are bold or only one bold span in the line
                     if line_spans:
-                        if bold_count == total_count or (bold_count == 1 and total_count == 1):
+                        is_single_bold = (bold_count == 1 and total_count == 1)
+                        is_all_bold = (bold_count == total_count)
+                        allow_heading = True
+                        line_text = " ".join(span["text"] for span in line["spans"]).strip() if line["spans"] else ""
+                        # Improved heuristics for headings
+                        if is_all_bold:
+                            # Must be at least 3 words or 15 characters
+                            if len(line_text.split()) < 3 and len(line_text) < 15:
+                                allow_heading = False
+                            # Must start with uppercase
+                            elif line_text and not line_text[0].isupper():
+                                allow_heading = False
+                            # Previous line should not end with hyphen
+                            elif prev_line_text and prev_line_text.strip().endswith("-"):
+                                allow_heading = False
+                        if is_single_bold:
+                            # Check if previous line ends with sentence-ending punctuation
+                            if prev_line_text and prev_line_text.strip()[-1:] in ".:;!?":
+                                allow_heading = False
+                        if (is_all_bold or is_single_bold) and allow_heading:
                             all_spans.extend(line_spans)
+                    # Update prev_line_text for next iteration
+                    prev_line_text = " ".join(span["text"] for span in line["spans"]).strip() if line["spans"] else None
         return all_spans
 
     def adjust_font_sizes(self, spans):
@@ -229,10 +251,30 @@ class PDFHeadingExtractor:
 
         toc = self.extract_toc(doc)
 
+        # Use metadata title if no H1 heading found
+        title = " ".join(title_parts).strip()
+        if not title:
+            meta_title = doc.metadata.get("title")
+            if meta_title:
+                title = meta_title.strip()
+        # If still no title, use largest text on page 1
+        if not title:
+            page1_spans = [s for s in spans if s["page"] == 1]
+            if page1_spans:
+                max_size = max(s["adjusted_size"] for s in page1_spans)
+                largest_spans = [s for s in page1_spans if s["adjusted_size"] == max_size]
+                # Combine all largest text spans on page 1
+                title = " ".join(s["text"] for s in largest_spans).strip()
+        # If still no title, use filename without extension
+        if not title:
+            title = os.path.splitext(os.path.basename(pdf_path))[0]
+
+        outline = [h for h in outline if h["text"].strip().lower() != title.strip().lower()]
+
         result = {
-            "title": " ".join(title_parts).strip(),
+            "title": title,
             "outline": outline,
-            "toc": toc
+            # "toc": toc
         }
 
         if include_text:

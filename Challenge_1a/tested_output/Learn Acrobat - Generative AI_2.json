@@ -1,16 +1,6 @@
 {
-    "title": "",
+    "title": "Persistent chat history",
     "outline": [
-        {
-            "level": "H3",
-            "text": "Note:",
-            "page": 1
-        },
-        {
-            "level": "H2",
-            "text": "Persistent chat history",
-            "page": 1
-        },
         {
             "level": "H2",
             "text": "Clear chat history",
@@ -52,11 +42,6 @@
             "page": 9
         },
         {
-            "level": "H3",
-            "text": "Note:",
-            "page": 10
-        },
-        {
             "level": "H2",
             "text": "Remove files from a collection",
             "page": 11
@@ -70,11 +55,6 @@
             "level": "H2",
             "text": "Request access from the Admin Console (Teams hybrid admins)",
             "page": 12
-        },
-        {
-            "level": "H3",
-            "text": "Note:",
-            "page": 14
         },
         {
             "level": "H1",
@@ -93,11 +73,6 @@
         },
         {
             "level": "H3",
-            "text": "send a request from?",
-            "page": 16
-        },
-        {
-            "level": "H3",
             "text": "What if I can’t find the option to request access to AI Assistant for Acrobat?",
             "page": 16
         },
@@ -112,11 +87,6 @@
             "page": 16
         },
         {
-            "level": "H1",
-            "text": "Prerequisites",
-            "page": 17
-        },
-        {
             "level": "H3",
             "text": "Enable new Acrobat",
             "page": 17
@@ -127,15 +97,9 @@
             "page": 17
         },
         {
-            "level": "H3",
-            "text": "Note:",
-            "page": 17
-        },
-        {
             "level": "H1",
             "text": "License deployment",
             "page": 18
         }
-    ],
-    "toc": []
+    ]
 }

@@ -4,7 +4,7 @@ from pathlib import Path
 from extract_headings import PDFHeadingExtractor
 import json
 
-INPUT_DIR = "/app/input"
+INPUT_DIR = "/app/input/PDFs"
 OUTPUT_DIR = "/app/outlines"
 INCLUDE_TEXT = True  # better to use boolean, not string
 

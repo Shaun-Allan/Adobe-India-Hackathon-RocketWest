@@ -26,26 +26,26 @@ docker build -t pdf-heading-extractor .
 
 ### 2. Prepare Input Files
 
-- Place your PDF files in a local folder, e.g., `/local/input`.
+- Place your PDF files in a local folder, e.g., `/input`.
 
 ### 3. Run the Container
 
 Mount your local input and output folders to the Docker container:
 
 ```bash
-docker run --rm -v /local/input:/app/input -v /local/output:/app/output pdf-heading-extractor
+docker run --rm -v /input:/app/input -v /output:/app/output pdf-heading-extractor
 ```
 
-- All PDF files in `/local/input` will be processed.
-- Extracted outlines (as `.json` files) will be saved to `/local/output`.
+- All PDF files in `/input` will be processed.
+- Extracted outlines (as `.json` files) will be saved to `/output`.
 
 **Note:**  
 - The `/app/input` and `/app/output` folders are used inside the Docker container.
-- Ensure your input PDF files are in the mounted `/local/input` directory before running.
+- Ensure your input PDF files are in the mounted `/input` directory before running.
 
 ### 4. Find Your Output
 
-- Look for the generated `.json` files in your specified `/local/output` directory after processing completes.
+- Look for the generated `.json` files in your specified `/output` directory after processing completes.
 
 ## Overview
 

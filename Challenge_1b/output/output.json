@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "input_documents": [
+      "South of France - Cities.pdf",
+      "South of France - Cuisine.pdf",
+      "South of France - History.pdf",
+      "South of France - Restaurants and Hotels.pdf",
+      "South of France - Things to Do.pdf",
+      "South of France - Tips and Tricks.pdf",
+      "South of France - Traditions and Culture.pdf"
+    ],
+    "persona": "Travel Planner",
+    "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
+    "processing_timestamp": "2025-07-28T16:28:52.557788"
+  },
+  "extracted_sections": [
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Planning, and Exploring",
+      "importance_rank": 1,
+      "page_number": 1
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "section_title": "Bars and Lounges",
+      "importance_rank": 2,
+      "page_number": 11
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "section_title": "Water Activities",
+      "importance_rank": 3,
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Spring (March to May)",
+      "importance_rank": 4,
+      "page_number": 3
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Packing for Adults",
+      "importance_rank": 5,
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Packing for Kids",
+      "importance_rank": 6,
+      "page_number": 6
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "City Exploration",
+      "importance_rank": 7,
+      "page_number": 7
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Tips and Tricks for Packing",
+      "importance_rank": 8,
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Luxurious Hotels",
+      "importance_rank": 9,
+      "page_number": 12
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Winter (December to February)",
+      "importance_rank": 10,
+      "page_number": 3
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Planning, and Exploring",
+      "refined_text": "This guide covers everything from packing essentials to travel tips.",
+      "page_number": 1
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "section_title": "Bars and Lounges",
+      "refined_text": "Plan a trip to the South of France.",
+      "page_number": 11
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "section_title": "Water Activities",
+      "refined_text": "Explore the stunning Ardèche Gorge.",
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Spring (March to May)",
+      "refined_text": "Pack a lightweight scarf for cooler evenings.",
+      "page_number": 3
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Packing for Adults",
+      "refined_text": "Pack a nice dress or dress pants and blouse/shirt.",
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Packing for Kids",
+      "refined_text": "Pack a small backpack for each child with their essentials.",
+      "page_number": 6
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "City Exploration",
+      "refined_text": "Use a guidebook to navigate and find points of interest.",
+      "page_number": 7
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Tips and Tricks for Packing",
+      "refined_text": "Packing for a trip to the South of France.",
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Luxurious Hotels",
+      "refined_text": "The South of France offers a wide range of dining options to suit every budget and preference.",
+      "page_number": 12
+    },
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Winter (December to February)",
+      "refined_text": "Clothing: Warm layers such as sweaters, long-sleeve shirts and thermal tops. A heavy coat, gloves, and a hat.",
+      "page_number": 3
+    }
+  ]
+}
