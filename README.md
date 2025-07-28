@@ -1,3 +1,24 @@
+# ⚠️ NOTE: THIS REPOSITORY INCLUDES MODEL FILES OVER 100MB, WHICH EXCEEDS GIT'S SIZE LIMITS AND MAY CAUSE CLONING ISSUES.  
+TO CLONE SUCCESSFULLY, PLEASE ENSURE YOU HAVE GIT LFS INSTALLED AND INITIALIZED BEFORE CLONING.
+
+#### To set up Git LFS, run the following commands before cloning:
+
+```
+# Install Git LFS (if not already installed)
+# For example, on Ubuntu: sudo apt install git-lfs
+# On Mac: brew install git-lfs
+
+# Initialize Git LFS
+git lfs install
+
+# Now clone the repo as usual
+git clone 
+```
+
+This ensures all large files are retrieved correctly and avoids issues with size limits.
+
+---
+
 # RocketWest Submission -- Adobe India Hackathon (Connecting the Dots)
 
 ## 📂 Repo Structure
