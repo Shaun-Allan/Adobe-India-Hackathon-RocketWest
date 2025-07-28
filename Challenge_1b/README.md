@@ -1,6 +1,6 @@
 # PDF Heading Extraction and Insight Summarization Pipeline
 
-A complete Python-based pipeline to extract hierarchical headings and section text from PDF documents, score and rank document sections against a user-defined task query using embeddings and keyword relevance, and generate concise insights summaries using an LLM (e.g., Flan-T5).
+A complete Python-based pipeline to extract hierarchical headings and section text from PDF documents, score and rank document sections against a user-defined task query using embeddings and keyword relevance, and generate concise insights summaries using an LLM, Flan-T5.
 
 ---
 
